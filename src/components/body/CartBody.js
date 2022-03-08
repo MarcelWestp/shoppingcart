@@ -3,8 +3,8 @@ import CartTable from "./CartTable";
 import AddItem from "./AddItem";
 
 function CartBody() {
-  const PRODUCT_URL = `http://localhost:8082/api/products`;
-  const CART_URL = `http://localhost:8082/api/items`;
+  const PRODUCT_URL = `${process.env.REACT_APP_API_URL}/api/products`;
+  const CART_URL = `${process.env.REACT_APP_API_URL}/api/items`;
 
   const [products, setProducts] = useState([]);
   const [productsIsLoading, setProductsIsLoading] = useState(true);
